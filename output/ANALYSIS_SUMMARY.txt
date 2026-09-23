@@ -1,0 +1,250 @@
+================================================================================
+NativData Project 2: Nigeria NCD Geospatial Analysis
+ANALYSIS SUMMARY
+================================================================================
+
+PROJECT SCOPE
+=============
+
+This project maps type 2 diabetes and cancer across Nigeria using real,
+published epidemiological data. It answers two questions:
+
+1. Where is diabetes burden highest in Nigeria? (Answer: clear South-North divide)
+2. Where do we KNOW cancer burden in Nigeria? (Answer: only 6 registries exist)
+
+The second question reveals a critical infrastructure gap.
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+FINDING 1: DIABETES HAS A SOUTH-NORTH GRADIENT
+----------------------------------------------
+
+Zone                 Prevalence      95% CI Range
+South South          9.8%            7.2-12.4%
+North East           5.9%            2.4-9.4%
+South West           5.5%            4.0-7.1%
+South East           4.6%            3.4-5.9%
+North Central        3.8%            2.9-4.7%
+North West           3.0%            1.7-4.3%
+
+INTERPRETATION:
+- South South's prevalence is 3.3x higher than North West
+- This is statistically significant and consistent across studies
+- Pattern mirrors Project 1's Pidgin/finance findings: South-North divide
+- Likely drivers: urbanization (South is more urban), income (oil wealth in
+  South South), lifestyle factors (Western diet adoption in urban areas)
+
+EVIDENCE:
+- Data source: Uloko et al. 2018 meta-analysis (peer-reviewed)
+- Sample: Pooled data from 30+ studies across Nigeria 2005-2018
+- Quality: Published in a Springer journal, proper 95% confidence intervals
+
+================================================================================
+
+FINDING 2: CANCER SURVEILLANCE IS CONCENTRATED IN THE SOUTH
+-----------------------------------------------------------
+
+Registry Location    State              Zone          ASR per 100,000
+Ibadan              Oyo                South West     98.5
+Abuja               Federal Capital    North Central  98.5
+Ekiti               Ekiti              South West     78.9
+Enugu               Enugu              South East     78.4
+Calabar             Cross River        South South    58.3
+
+REGISTRIES BY ZONE:
+- South West: 2 registries
+- South East: 2 registries
+- South South: 1 registry
+- North Central: 1 registry (Abuja only, most populated Northern city)
+- North East: 0 registries
+- North West: 0 registries
+
+INTERPRETATION:
+This is NOT random. Two-thirds of Nigeria's cancer registries are in the
+South, with the North almost completely absent. This reflects:
+
+1. Infrastructure investment patterns (South has more hospitals)
+2. Research capacity concentration (universities in South)
+3. Economic disparities (funding follows wealth)
+4. Urban-rural divides (registries need stable infrastructure)
+
+CRITICAL IMPLICATION:
+We cannot say "cancer burden is lower in the North." We can only say
+"cancer burden in the North is invisible in published data." The absence
+of data is not the absence of disease.
+
+EVIDENCE:
+- Ibadan and Abuja registries: Jedy-Agba et al. 2012, PubMed 22621842
+- Calabar, Ekiti, Enugu: NCBI Bookshelf cancer registry summaries
+- All registries: population-based (not hospital-based), so ASR comparisons valid
+- Study periods: 2009-2016 (recent enough to be relevant)
+
+================================================================================
+
+FINDING 3: SURVEILLANCE INEQUALITY IS THE REAL STORY
+-----------------------------------------------------
+
+Complete Coverage (All 6 zones):
+- Diabetes: YES - Uloko et al. 2018 includes all zones
+- National inference: POSSIBLE
+
+Sparse Coverage (6 states only, 16% of Nigeria):
+- Cancer: NO - only 6 registries, 5 in South
+- National inference: NOT POSSIBLE
+
+What This Means for Public Health Policy:
+- We know diabetes burden is high across Nigeria, including the North
+- We do NOT know cancer burden in 31 Nigerian states
+- Health system strengthening in cancer surveillance is needed, especially
+  in North-East, North-West (zero registries) and parts of North Central
+- Resource allocation for cancer prevention/treatment cannot be evidence-based
+  in most of Nigeria
+
+This is a systems-level health equity problem.
+
+================================================================================
+
+WHY THIS MATTERS FOR YOUR POSTGRADUATE APPLICATIONS
+====================================================
+
+This project demonstrates:
+
+1. SCIENTIFIC HONESTY: I don't hide data gaps; I map them and explain them.
+
+2. REAL SKILLS: I worked with published medical literature (not toy data),
+   cited sources properly, understood geographic resolution mismatches,
+   and visualized what could and couldn't be shown.
+
+3. HEALTH SYSTEMS THINKING: I didn't just make pretty maps. I identified
+   an infrastructure inequality and explained its implications for public
+   health.
+
+comparison to Project 1:
+- Project 1 (Pidgin/Finance): Exploratory, correlation-based
+- Project 2 (Diabetes/Cancer): Evidence-based, policy-relevant, gap-focused
+
+================================================================================
+
+GEOGRAPHIC PATTERNS (Same as Project 1)
+=======================================
+
+South-North Divide Appears in Both Projects:
+
+Project 1 (Pidgin English):
+- 90% speakers in South (Rivers, Bayelsa)
+- 25% speakers in North (Sokoto)
+- Language follows trade and urban history
+
+Project 2 (NCDs):
+- Diabetes: 9.8% in South South vs 3.0% in North West
+- Cancer: All registries in South (except 1 in Abuja)
+- Disease burden and surveillance both South-concentrated
+
+Interpretation:
+This isn't coincidence. The South-North divide in Nigeria reflects:
+- Urbanization (South > North)
+- Economic activity (oil, trade in South)
+- Health system infrastructure (better resourced in South)
+- Research capacity (universities, hospitals in South)
+
+These are structural, not natural patterns. Understanding them matters for
+evidence-based policy.
+
+================================================================================
+
+METHODOLOGICAL NOTES
+====================
+
+Why Zone Level for Diabetes, Registry Level for Cancer?
+
+Diabetes: Uloko et al. meta-analysis reports zone-level aggregates.
+Raw data not available; zone is the smallest geographic unit.
+
+Cancer: No national registry exists. Only individual, isolated registries.
+These happen to be in 6 states scattered across Nigeria.
+
+Could we do state-level diabetes? Not from published sources. State-level
+data would require accessing NDHS raw datasets and performing custom analysis.
+
+Could we do zone-level cancer? No. Registries don't group by zone; we can't
+aggregate scattered registries into meaningful zone estimates without
+fabricating data.
+
+The lesson: This project shows an even more greater problem;
+Data scientists in Nigeria, struggle to make evidence based decisions due to fragmented health data.
+
+================================================================================
+
+LIMITATIONS
+=======================================
+
+1. TEMPORAL MISMATCH
+   - Diabetes: Uloko et al. meta-analysis pools studies 2005-2018
+   - Cancer: Registries are 2009-2016
+   - Not from the exact same year, but close enough for geographic pattern
+
+2. DIABETES IS ZONE LEVEL, CANCER IS STATE LEVEL
+   - Cannot calculate zone-level cancer burden
+   - Cannot calculate state-level diabetes burden
+   - Cannot directly correlate at one level
+   - This is why we overlay instead of merge
+
+3. CANCER DATA IS SPARSE
+   - Only 6 registries; cannot infer national cancer burden
+   - Cannot say "cancer is lower in the North"; can only say "invisible"
+
+4. NO INDIVIDUAL-LEVEL DATA
+   - All aggregated by geography
+   - Cannot link individual diabetes + cancer status
+
+These limitations has shone light on a big issue with health data systems in Nigeria.
+
+================================================================================
+
+WHAT EACH MAP SHOWS
+===================
+
+Map 1: 01_diabetes_zone_choropleth.html
+- Choropleth (colored zones) showing diabetes prevalence
+- Color: Yellow (low, 3%) to Red (high, 9.8%)
+- All 6 zones colored (complete coverage)
+- Story: "Diabetes burden is unequal, highest in South South"
+
+Map 2: 02_cancer_registry_coverage_map.html
+- Points (dots) showing where cancer registries exist
+- Background: all state boundaries in light grey (shows what's missing)
+- Points color-coded by zone
+- Story: "Cancer registries are rare and South-concentrated"
+
+Map 3: 03_overlay_diabetes_cancer_map.html
+- Diabetes choropleth + cancer registry points on top
+- Story: "South has both disease burden AND surveillance capacity.
+  North has diabetes burden but no cancer data."
+
+================================================================================
+
+SOURCES & CITATIONS
+===================
+
+Uloko AE, Mba CM, Uloko AT. (2018). "The prevalence of diabetes mellitus in
+Nigeria: A systematic review and meta-analysis." Primary Care Diabetes.
+PubMed: 29807817. PMC: PMC5984944.
+
+Jedy-Agba E, Curado MP, Ogunbiyi O, et al. (2012). "Cancer incidence in Nigeria:
+A report from population-based cancer registries." Cancer Epidemiology. 
+PubMed: 22621842.
+
+Individual state cancer registries (from NCBI Bookshelf):
+- Calabar (Cross River): NCBI Bookshelf 581069
+- Ekiti (Ekiti): NCBI Bookshelf 581056
+- Enugu (Enugu): NCBI Bookshelf 581076
+
+Nigeria state boundaries: HumanData COD AB NGA shapefile.
+
+================================================================================
+Written by: Olokhimo Oluwasunmisola Osawere (Khimo)
+Project: NativData Project 2
+Date: September 2026
+================================================================================

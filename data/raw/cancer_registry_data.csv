@@ -1,0 +1,7 @@
+registry_name,state_name,geopolitical_zone,study_period,asr_per_100000_both_sexes,asr_male,asr_female,total_cases,source_citation
+Ibadan Cancer Registry (IBCR),Oyo,South West,2009-2010,98.5,66.4,130.6,3393,Jedy-Agba et al. 2012 PubMed 22621842
+Abuja Cancer Registry (ABCR),Federal Capital Territory,North Central,2009-2010,98.5,58.3,138.6,1128,Jedy-Agba et al. 2012 PubMed 22621842
+Calabar Cancer Registry (CCR),Cross River,South South,2009-2016,58.3,50.8,86.9,719,Cross River State NCBI Bookshelf NBK581069
+Ekiti Cancer Registry (ECR),Ekiti,South West,2014-2016,78.9,86.1,69.7,826,Ekiti State NCBI Bookshelf NBK581056
+Enugu Cancer Registry (ECR2),Enugu,South East,2012-2016,78.4,58.1,98.6,3018,Enugu State NCBI Bookshelf NBK581076
+Abuja+Enugu Combined PBCRs,Multi-state combined,Mixed,2012-2014,113.9,94.2,160.2,4336,Jedy-Agba et al. Frontiers Oncol 2016 PMC5075533
