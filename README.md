@@ -49,7 +49,7 @@ nativdata-p2-ncd-geospatial/
 ### Stage 1: Data Loading & Exploration
 **File:** `notebooks/1_load_data.py`
 
-Load and inspect all raw data:
+Loaded and inspected all raw data:
 - Cancer registries (6 registries across 6 states)
 - Diabetes prevalence by geopolitical zone (all 6 zones)
 - State-to-zone mapping (37 states + FCT)
@@ -60,19 +60,19 @@ Load and inspect all raw data:
 ### Stage 2: Data Merging & Preparation
 **File:** `notebooks/2_merge_data.py`
 
-Merge data at appropriate geographic levels:
-- Merge shapefile with zone assignments (state level)
-- Clean cancer data for registry-only states (6 states)
-- Clean diabetes data for zone-level mapping (6 zones)
+Merged data at appropriate geographic levels:
+- Merged shapefile with zone assignments (state level)
+- Cleaned cancer data for registry-only states (6 states)
+- Cleaned diabetes data for zone-level mapping (6 zones)
 
-**Key insight:** Cancer and diabetes are at different geographic resolutions, so they cannot be directly merged. We work at both levels separately, then overlay carefully.
+**Key insight:** Cancer and diabetes are at different geographic resolutions, so they cannot be directly merged. i worked with both levels separately, then overlaid carefully.
 
 **Output:** Processed GeoJSON and CSV files saved to `data/processed/`.
 
 ### Stage 3: Diabetes Choropleth Map
 **File:** `notebooks/3_diabetes_zone_map.py`
 
-Create zone-level choropleth showing diabetes prevalence across all Nigeria.
+Created zone level choropleth showing diabetes prevalence across all Nigeria.
 
 **Data:** Uloko et al. 2018 meta-analysis (all 6 zones)
 
@@ -86,7 +86,7 @@ Create zone-level choropleth showing diabetes prevalence across all Nigeria.
 ### Stage 4: Cancer Registry Coverage Map
 **File:** `notebooks/4_cancer_registry_map.py`
 
-Map cancer registries as POINTS, not choropleth, because only 6 registries exist.
+Cancer registries appear as POINTS, not choropleth, because only 6 registries exist.
 
 **Data:** Population-based cancer registries from NCBI (Jedy-Agba et al., individual state registries)
 
@@ -97,12 +97,12 @@ Map cancer registries as POINTS, not choropleth, because only 6 registries exist
 
 **Key finding:** All 6 registries are in the South (South-East: 2, South-West: 2, South-South: 1). ZERO in the North (North-West, North-East, North-Central).
 
-**Critical note:** This gap is NOT a data collection error. It reflects real infrastructure inequality in Nigeria's cancer surveillance system.
+**Critical note:** This gap is NOT a data collection error. It reflects real infrastructure inequality in Nigeria's cancer surveillance system which highlights a much bigger problem => fragmented health data.
 
 ### Stage 5: Overlay Analysis
 **File:** `notebooks/5_overlay_ncd_analysis.py`
 
-Overlay diabetes choropleth (complete) with cancer registry points (sparse).
+Overlaid diabetes choropleth (complete) with cancer registry points (sparse).
 
 **Map:** `03_overlay_diabetes_cancer_map.html`
 
